@@ -12,7 +12,7 @@ pub struct UserController;
 
 impl UserController {
 	pub fn create(_: &mut Request) -> IronResult<Response> {
-	    Ok(Response::with((iron::status::Ok)))
+	    Ok(Response::with(iron::status::Ok))
 	}
 	pub fn read(req: &mut Request) -> IronResult<Response> {
 		let id = req.extensions.get::<Router>().unwrap().find("id").unwrap().parse::<i64>().unwrap();
